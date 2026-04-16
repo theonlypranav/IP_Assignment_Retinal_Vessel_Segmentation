@@ -78,12 +78,8 @@ def post_process(pred):
 # -------- UI --------
 
 st.title("Retinal Vessel Segmentation")
-st.markdown("### 👥 Group Members")
-st.markdown("""
-- Pranav Deshpande  
-- Mehul Goel
-- Nakshatara Garg  
-""")
+st.markdown("### Group Members (PID - 24)")
+st.markdown(""" Pranav Deshpande, Mehul Goel, Nakshatara Garg""")
 st.markdown("""
 ### 🧠 Model Overview
 This model segments retinal blood vessels by first enhancing the image using CLAHE and detecting vessel-like structures using multi-orientation matched filtering. 
