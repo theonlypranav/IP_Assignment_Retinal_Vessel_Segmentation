@@ -85,9 +85,12 @@ st.markdown("""
 - Nakshatara Garg  
 """)
 st.markdown("""
-### 🧠 Model Summary
-This model segments retinal blood vessels using CLAHE-based contrast enhancement and matched filtering to highlight vessel structures. 
-Pixel-wise features are classified using an AdaBoost model, followed by morphological operations to refine the vessel map.
+### 🧠 Model Overview
+This model segments retinal blood vessels by first enhancing the image using CLAHE and detecting vessel-like structures using multi-orientation matched filtering. 
+Pixel-wise features (intensity, filter response, gradients, and local variation) are then classified using an AdaBoost model to distinguish vessels from background.
+
+### ✨ Key Improvement
+Unlike the original approach which removes small detected regions, this implementation applies morphological closing and dilation to improve vessel continuity, helping preserve thin and fragmented vessels.
 """)
 st.write("Upload a fundus image to detect blood vessels.")
 
