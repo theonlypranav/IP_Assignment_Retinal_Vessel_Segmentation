@@ -3,12 +3,15 @@ import cv2
 import numpy as np
 import joblib
 from PIL import Image
+import os
 
 # -------- PAGE CONFIG --------
 st.set_page_config(page_title="Retinal Vessel Segmentation", layout="wide")
 
 # -------- LOAD MODEL --------
-model = joblib.load("models/model.pkl")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(script_dir, "models", "model.pkl")
+model = joblib.load(model_path)
 
 # -------- FUNCTIONS --------
 
