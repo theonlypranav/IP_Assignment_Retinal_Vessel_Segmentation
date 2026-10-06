@@ -1,6 +1,6 @@
 numpy
 opencv-python-headless
-scikit-learn==1.6.1
+scikit-learn
 matplotlib
 joblib
 streamlit
